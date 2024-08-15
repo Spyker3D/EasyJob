@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/searchJobFragment">
+
+    <fragment
+        android:id="@+id/searchJobFragment"
+        android:name="com.spyker3d.easyjob.search.ui.SearchJobFragment"
+        android:label="fragment_search_job"
+        tools:layout="@layout/fragment_search_job">
+        <action
+            android:id="@+id/action_searchJobFragment_to_filterSettingsFragment"
+            app:destination="@id/filterSettingsFragment" />
+        <action
+            android:id="@+id/action_searchJobFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.spyker3d.easyjob.details.ui.JobDetailsFragment"
+        android:label="fragment_job_details"
+        tools:layout="@layout/fragment_job_details" />
+    <fragment
+        android:id="@+id/favoritesJobsFragment"
+        android:name="com.spyker3d.easyjob.favorites.ui.FavoritesJobsFragment"
+        android:label="fragment_favorites_jobs"
+        tools:layout="@layout/fragment_favorites_jobs" >
+        <action
+            android:id="@+id/action_favoritesJobsFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/devTeamFragment"
+        android:name="com.spyker3d.easyjob.team.ui.DevTeamFragment"
+        android:label="fragment_dev_team"
+        tools:layout="@layout/fragment_dev_team" />
+    <fragment
+        android:id="@+id/filterSettingsFragment"
+        android:name="com.spyker3d.easyjob.filter.ui.FilterSettingsFragment"
+        android:label="fragment_filter_settings"
+        tools:layout="@layout/fragment_filter_settings">
+        <action
+            android:id="@+id/action_filterSettingsFragment_to_filterPlaceToWorkFragment"
+            app:destination="@id/filterPlaceToWorkFragment" />
+        <action
+            android:id="@+id/action_filterSettingsFragment_to_filterIndustryFragment"
+            app:destination="@id/filterIndustryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterPlaceToWorkFragment"
+        android:name="com.spyker3d.easyjob.filter.ui.FilterPlaceToWorkFragment"
+        android:label="fragment_filter_place_to_work"
+        tools:layout="@layout/fragment_filter_place_to_work" >
+        <action
+            android:id="@+id/action_filterPlaceToWorkFragment_to_filterCountryFragment"
+            app:destination="@id/filterCountryFragment" />
+        <action
+            android:id="@+id/action_filterPlaceToWorkFragment_to_filterRegionFragment"
+            app:destination="@id/filterRegionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterRegionFragment"
+        android:name="com.spyker3d.easyjob.filter.ui.FilterRegionFragment"
+        android:label="fragment_filter_region"
+        tools:layout="@layout/fragment_filter_with_recycler" />
+
+    <fragment
+        android:id="@+id/filterIndustryFragment"
+        android:name="com.spyker3d.easyjob.filter.ui.FilterIndustryFragment"
+        tools:layout="@layout/fragment_filter_with_recycler" />
+
+    <fragment
+        android:id="@+id/filterCountryFragment"
+        android:name="com.spyker3d.easyjob.filter.ui.FilterCountryFragment"
+        android:label="fragment_filter_country" />
+
+</navigation>

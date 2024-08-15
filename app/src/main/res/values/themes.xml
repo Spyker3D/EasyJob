@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Base.Theme.PracticumAndroidEasyJob" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorOnPrimary">@color/Black</item>
+    </style>
+
+    <style name="Theme.PracticumAndroidEasyJob" parent="Base.Theme.PracticumAndroidEasyJob" />
+</resources>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.spyker3d.easyjob.filter.ui.FilterSettingsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/filterLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/filterRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp16" />
+
+    <ImageView
+        android:id="@+id/filterArrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/icon_arrow_back"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/filterTitle"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:text="@string/filter_title"
+        app:layout_constraintBottom_toBottomOf="@id/filterArrowBack"
+        app:layout_constraintStart_toEndOf="@id/filterArrowBack"
+        app:layout_constraintTop_toTopOf="@id/filterArrowBack" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterWorkPlaceInactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp36"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle">
+
+        <TextView
+            android:id="@+id/filterFirstFilterName"
+            style="@style/RegularText.16size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="30"
+            android:text="@string/place_of_work"
+            android:textColor="@color/Gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/icon_arrow_forward"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterIndustryInactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp96"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle">
+
+        <TextView
+            android:id="@+id/filterSecondFilterName"
+            style="@style/RegularText.16size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="30"
+            android:text="@string/industry"
+            android:textColor="@color/Gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/icon_arrow_forward"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterWorkPlaceActive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp36"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/filterWorkPlaceTitle"
+            style="@style/RegularText.12size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:text="@string/place_of_work"
+            app:layout_constraintBottom_toTopOf="@id/filterWorkPlaceValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <TextView
+            android:id="@+id/filterWorkPlaceValue"
+            style="@style/RegularText.16size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/filterWorkPlaceCross"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterWorkPlaceTitle"
+            tools:text="Москва, Россия" />
+
+        <ImageView
+            android:id="@+id/filterWorkPlaceCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/icon_cross_black_white"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterIndustryActive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp96"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/filterIndustryTitle"
+            style="@style/RegularText.12size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:text="@string/industry"
+            app:layout_constraintBottom_toTopOf="@id/filterIndustryValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <TextView
+            android:id="@+id/filterIndustryValue"
+            style="@style/RegularText.16size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/filterIndustryCross"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterIndustryTitle"
+            tools:text="IT" />
+
+        <ImageView
+            android:id="@+id/filterIndustryCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/icon_cross_black_white"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/filterSalaryInputBackground"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp52"
+        android:layout_marginTop="@dimen/dp180"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/filterTitle" />
+
+    <TextView
+        android:id="@+id/filterSalaryInputTitle"
+        style="@style/RegularText.12size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:text="@string/expected_salary"
+        android:textColor="@color/Gray_OR_White"
+        app:layout_constraintBottom_toTopOf="@id/filterSalaryInput"
+        app:layout_constraintStart_toStartOf="@id/filterSalaryInputBackground"
+        app:layout_constraintTop_toTopOf="@id/filterSalaryInputBackground"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/filterSalaryInput"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:hint="@string/enter_amount"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/search_hint_gray_to_white"
+        android:textCursorDrawable="@drawable/cursor_drawable"
+        app:layout_constraintBottom_toBottomOf="@id/filterSalaryInputBackground"
+        app:layout_constraintEnd_toStartOf="@+id/filterSalaryCross"
+        app:layout_constraintStart_toStartOf="@id/filterSalaryInputBackground"
+        app:layout_constraintTop_toBottomOf="@id/filterSalaryInputTitle" />
+
+    <ImageView
+        android:id="@+id/filterSalaryCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp16"
+        android:background="@drawable/icon_cross"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/filterSalaryInputBackground"
+        app:layout_constraintEnd_toEndOf="@id/filterSalaryInputBackground"
+        app:layout_constraintTop_toTopOf="@id/filterSalaryInputBackground"
+        app:layout_goneMarginEnd="@dimen/dp16" />
+
+    <TextView
+        android:id="@+id/filterDontShowWithoutSalaryTitle"
+        style="@style/RegularText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp44"
+        android:text="@string/dont_show_without_salary"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/filterSalaryInputBackground" />
+
+    <CheckBox
+        android:id="@+id/filterDontShowWithoutSalaryCheckBox"
+        android:layout_width="@dimen/dp24"
+        android:layout_height="@dimen/dp24"
+        android:background="@drawable/checkbox_selector"
+        android:button="@null"
+        app:buttonCompat="@null"
+        app:layout_constraintBottom_toBottomOf="@id/filterDontShowWithoutSalaryTitle"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintTop_toTopOf="@id/filterDontShowWithoutSalaryTitle" />
+
+
+    <Button
+        android:id="@+id/filterApplyButton"
+        style="@style/RegularText.16size"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginBottom="@dimen/dp8"
+        android:backgroundTint="@color/Blue"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:minHeight="0dp"
+        android:text="@string/apply"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/dp12"
+        app:layout_constraintBottom_toTopOf="@id/filterResetButton"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintOverlap" />
+
+
+    <Button
+        android:id="@+id/filterResetButton"
+        style="@style/RegularText.16size"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginBottom="@dimen/dp24"
+        android:background="?attr/selectableItemBackground"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:minHeight="0dp"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/reset"
+        android:textAllCaps="false"
+        android:textColor="@color/Red"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/dp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintOverlap" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

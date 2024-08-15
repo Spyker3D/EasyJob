@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spyker3d.easyjob.team.ui.DevTeamFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/teamGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp16" />
+
+    <TextView
+        android:id="@+id/teamTitle"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/team_title"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamText"
+        style="@style/BoldText.32size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/team_text"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@id/teamTitle" />
+
+    <TextView
+        android:id="@+id/teamPerson1"
+        style="@style/MediumText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp32"
+        android:text="@string/team_person1"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamText" />
+
+    <TextView
+        android:id="@+id/teamPerson2"
+        style="@style/MediumText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/team_person2"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamPerson1" />
+
+    <TextView
+        android:id="@+id/teamPerson3"
+        style="@style/MediumText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/team_person3"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamPerson2" />
+
+    <TextView
+        android:id="@+id/teamPerson4"
+        style="@style/MediumText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/team_person4"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamPerson3" />
+
+    <TextView
+        android:id="@+id/teamPerson5"
+        style="@style/MediumText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/team_person5"
+        app:layout_constraintStart_toStartOf="@id/teamGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamPerson4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

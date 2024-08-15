@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spyker3d.easyjob.search.ui.SearchJobFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/filterLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/filterRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp16" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButtonFilterWithRecycler"
+        style="@style/BackButton"
+        android:layout_marginStart="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp8"
+        android:drawableStart="@drawable/icon_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTag="back_btn_filter_settings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchTitle"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/filter_industry_title"
+        app:layout_constraintLeft_toRightOf="@id/backButtonFilterWithRecycler"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Задать шапку фрагмента" />
+
+    <View
+        android:id="@+id/filterInput"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp56"
+        android:layout_marginTop="@dimen/dp28"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/searchTitle" />
+
+    <EditText
+        android:id="@+id/filterInputET"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:hint="@string/edit_hint"
+        android:inputType="textNoSuggestions"
+        android:minHeight="@dimen/search_input_min_height"
+        android:popupTheme="@style/SuggestionsStyle"
+        android:textColorHint="@color/search_hint_gray_to_white"
+        android:textCursorDrawable="@drawable/cursor_drawable"
+        app:layout_constraintBottom_toBottomOf="@id/filterInput"
+        app:layout_constraintEnd_toStartOf="@id/filterInputIcon"
+        app:layout_constraintStart_toStartOf="@id/filterInput"
+        app:layout_constraintTop_toTopOf="@id/filterInput"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck,VisualLintOverlap" />
+
+    <ImageButton
+        android:id="@+id/filterInputIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp16"
+        android:background="@drawable/icon_search"
+        app:layout_constraintBottom_toBottomOf="@id/filterInput"
+        app:layout_constraintEnd_toEndOf="@id/filterInput"
+        app:layout_constraintStart_toEndOf="@id/filterInputET"
+        app:layout_constraintTop_toTopOf="@id/filterInput"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterInput"
+        app:layout_constraintBottom_toTopOf="@id/filterApplyButton"
+        tools:listitem="@layout/filter_with_recycler_item"
+
+        tools:visibility="visible"
+        />
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:indeterminateTint="@color/Blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterInput"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/dp80"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/searchPlaceholderImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp56"
+        android:visibility="gone"
+        android:background="@drawable/picture_flying_men"
+        app:layout_constraintDimensionRatio="328:223"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/filterInput"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/searchPlaceholderText"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp56"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchPlaceholderImage" />
+
+    <Button
+        android:id="@+id/filterApplyButton"
+        style="@style/RegularText.16size"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginBottom="@dimen/dp24"
+        android:backgroundTint="@color/Blue"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:minHeight="0dp"
+        android:text="@string/select"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        app:cornerRadius="@dimen/dp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/filterRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/filterLeftGuideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintOverlap" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

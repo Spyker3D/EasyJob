@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingHorizontal="@dimen/dp16"
+    android:paddingVertical="@dimen/dp8">
+
+    <View
+        android:id="@+id/secretView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/jobImage"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toStartOf="@id/jobTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secretView"
+        />
+
+    <TextView
+        android:id="@+id/jobTitle"
+        style="@style/MediumText.22size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp12"
+        android:layout_marginEnd="@dimen/dp16"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintBottom_toTopOf="@id/jobEmployer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/jobImage"
+        app:layout_constraintTop_toBottomOf="@id/secretView"
+        tools:text="Android-разработчик, Москва" />
+
+    <TextView
+        android:id="@+id/jobEmployer"
+        style="@style/RegularText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp12"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/jobSalary"
+        app:layout_constraintStart_toEndOf="@id/jobImage"
+        app:layout_constraintTop_toBottomOf="@id/jobTitle"
+        tools:text="Еда" />
+
+    <TextView
+        android:id="@+id/jobSalary"
+        style="@style/RegularText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp12"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@id/jobImage"
+        app:layout_constraintTop_toBottomOf="@id/jobEmployer"
+        tools:text="от 100 000 Р" />
+</androidx.constraintlayout.widget.ConstraintLayout>

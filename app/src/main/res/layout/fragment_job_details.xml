@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spyker3d.easyjob.details.ui.JobDetailsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/jobLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/jobRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp16" />
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp56"
+        android:indeterminateTint="@color/Blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobPageTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/jobArrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/icon_arrow_back"
+        app:layout_constraintStart_toStartOf="@id/jobLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jobPageTitle"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:text="@string/job_title"
+        app:layout_constraintBottom_toBottomOf="@id/jobArrowBack"
+        app:layout_constraintStart_toEndOf="@id/jobArrowBack"
+        app:layout_constraintTop_toTopOf="@id/jobArrowBack" />
+
+    <ImageView
+        android:id="@+id/jobHeartIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp4"
+        android:src="@drawable/icon_heart"
+        app:layout_constraintEnd_toEndOf="@id/jobRightGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/jobShareIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/icon_share"
+        app:layout_constraintEnd_toStartOf="@id/jobHeartIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jobTitle"
+        style="@style/BoldText.32size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp44"
+        app:layout_constraintStart_toStartOf="@id/jobLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/jobRightGuideline"
+        app:layout_constraintTop_toBottomOf="@id/jobPageTitle"
+        android:textAlignment="textStart"
+        tools:text="Android-разработчик" />
+
+    <TextView
+        android:id="@+id/jobSalary"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        app:layout_constraintStart_toStartOf="@id/jobTitle"
+        app:layout_constraintTop_toBottomOf="@id/jobTitle"
+        tools:text="от 100 000₽" />
+
+    <View
+        android:id="@+id/jobCard"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp80"
+        android:layout_marginTop="@dimen/dp24"
+        android:background="@drawable/job_card_bg"
+        app:layout_constraintEnd_toEndOf="@id/jobRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/jobLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/jobSalary" />
+
+    <ImageView
+        android:id="@+id/jobImage"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/dp16"
+        tools:background="@drawable/placeholder_logo"
+        app:layout_constraintBottom_toBottomOf="@id/jobCard"
+        app:layout_constraintStart_toStartOf="@id/jobCard"
+        app:layout_constraintTop_toTopOf="@id/jobCard" />
+
+    <TextView
+        android:id="@+id/jobCompany"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/Black"
+        android:maxWidth="@dimen/dp250"
+        android:maxLines="2"
+        app:layout_constraintBottom_toTopOf="@+id/jobCity"
+        app:layout_constraintStart_toEndOf="@id/jobImage"
+        app:layout_constraintTop_toTopOf="@id/jobImage"
+        tools:text="Еда"
+
+        />
+
+    <TextView
+        android:id="@+id/jobCity"
+        style="@style/RegularText.16size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toBottomOf="@+id/jobImage"
+        app:layout_constraintStart_toEndOf="@id/jobImage"
+        app:layout_constraintTop_toBottomOf="@id/jobCompany"
+        tools:text="Москва"
+
+        />
+
+    <ScrollView
+        android:id="@+id/jobInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/jobRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/jobLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/jobCard">
+
+
+        <LinearLayout
+            android:id="@+id/jobInfoContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jobExperienceTitle"
+                style="@style/MediumText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="@string/job_experience" />
+
+            <TextView
+                android:id="@+id/jobExperienceText1"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                tools:text="От 1 года до 3 лет" />
+
+            <TextView
+                android:id="@+id/jobExperienceText2"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp32"
+                tools:text="Полная занятость, Удаленная работа" />
+
+            <TextView
+                android:id="@+id/jobDescriptionTitle"
+                style="@style/MediumText.22size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:text="@string/job_description" />
+
+            <TextView
+                android:id="@+id/jobDescriptionText"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:layout_marginBottom="@dimen/dp16"
+                tools:text="•  Разрабатывать новую функциональность приложения\n•  Помогать с интеграцией нашего SDK в другие приложения\n•  Проектировать большие новые модули\n•  Писать UI- и unit-тесты\n•  Следить за работоспособностью сервиса и устранять технический долг" />
+
+            <TextView
+                android:id="@+id/jobKeySkillsTitle"
+                style="@style/MediumText.22size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="@string/job_key_skills" />
+
+            <TextView
+                android:id="@+id/jobKeySkillsText"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:layout_marginBottom="@dimen/dp24"
+                tools:text="•  Знание классических алгоритмов и структур данных\n•  Программирование для Android больше одного года\n•  Знание WebRTC" />
+
+            <TextView
+                android:id="@+id/jobContactsTitle"
+                style="@style/MediumText.22size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:text="@string/job_contacts" />
+
+            <TextView
+                android:id="@+id/jobContactsEmail"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:layout_marginBottom="@dimen/dp4"
+                android:autoLink="email"
+                android:text="@string/email"
+                />
+
+            <TextView
+                android:id="@+id/jobContactsPhone"
+                style="@style/RegularText.16size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:layout_marginBottom="@dimen/dp4"
+                android:autoLink="phone"
+                android:text="@string/phone_number"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/jobPlaceholderImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp56"
+        android:background="@drawable/picture_funny_phone"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="328:223"
+        app:layout_constraintEnd_toEndOf="@id/jobRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/jobLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/jobPageTitle" />
+
+    <TextView
+        android:id="@+id/jobPlaceholderText"
+        style="@style/MediumText.22size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:visibility="gone"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobPlaceholderImage"
+        android:text="@string/net_vacancy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

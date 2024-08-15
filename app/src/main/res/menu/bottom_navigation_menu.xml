@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/searchJobFragment"
+        android:icon="@drawable/bttm_nav_main_icon"
+        android:title="@string/main" />
+    <item
+        android:id="@+id/favoritesJobsFragment"
+        android:icon="@drawable/bttm_nav_favorites_icon"
+        android:title="@string/favorites" />
+    <item
+        android:id="@+id/devTeamFragment"
+        android:icon="@drawable/bttm_nav_team_icon"
+        android:title="@string/dev_team" />
+</menu>

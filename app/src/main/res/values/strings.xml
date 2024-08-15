@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Practicum-Android-EasyJob</string>
+
+
+    <string name="team_title">Команда</string>
+    <string name="team_text">Над приложением\nработали</string>
+    <string name="team_person4">Соколов Игорь</string>
+    <string name="team_person1">Земцов Никита</string>
+    <string name="team_person3">Равдин Леонид</string>
+    <string name="team_person2">Кобозева Оксана</string>
+    <string name="team_person5">Цыбульский Сергей</string>
+
+    <string name="main">Главная</string>
+    <string name="favorites">Избранное</string>
+    <string name="dev_team">Команда</string>
+
+    <string name="net_common_dictionary_income_error_message">Общий словарь не получен</string>
+    <string name="net_locales_dictionary_income_error_message">Словарь локалей не получен</string>
+    <string name="net_industry_dictionary_income_error_message">Словарь отраслей не получен</string>
+    <string name="net_areas_dictionary_income_error_message">Словарь регионов не полученr</string>
+    <string name="net_countries_dictionary_income_error_message">Словарь стран не получен</string>
+    <string name="net_vacancy_suggestions_income_error_message">Список подсказок должностей не получен</string>
+    <string name="net_vacancy_suggestions_request_text_length_error_message">Ожидаемая длина запроса подсказок должностей - от 2 до 3000 символов</string>
+    <string name="net_vacancy_search_income_error_message">Список вакансий не получен</string>
+    <string name="net_vacancy_get_by_id_income_error_message">Запрошенная  вакансия не получена</string>
+    <string name="net_area_suggestions_request_text_length_error_message">Ожидаемая длина запроса поиска в регионе - от 2 до 3000 символов</string>
+    <string name="net_area_suggestions_income_error_message">Список подсказок регионов не получен</string>
+    <string name="net_timeout_error_message">Превышено время ожидания ответа сервера</string>
+
+    <string name="search_title">Поиск вакансий</string>
+    <string name="search_hint">Введите запрос</string>
+
+    <string name="job_title">Вакансия</string>
+
+    <string name="job_experience">Требуемый опыт</string>
+    <string name="job_description">Описание вакансии</string>
+    <string name="job_responsibilities">Обязанности</string>
+    <string name="job_requirements">Требования</string>
+    <string name="job_conditions">Условия</string>
+    <string name="job_key_skills">Ключевые навыки</string>
+    <string name="job_contacts">Контакты</string>
+
+
+    <string name="net_vacancy">Вакансия не найдена или\nудалена</string>
+    <string name="no_such_region">Такого региона нет</string>
+
+    <string name="no_internet">Нет интернета</string>
+    <string name="failed_list_vacancy">Не удалось получить\n список вакансий</string>
+    <string name="failed_to_receive_region_list">Не удалось получить\n список</string>
+    <string name="favourites_title">Избранное</string>
+
+    <string name="list_is_empty">Cписок пуст</string>
+
+    <string name="salary_range">от %1s до %1s %1s</string>
+    <string name="salary_from">от %1s %1s</string>
+    <string name="salary_to">до %1s %1s</string>
+    <string name="no_salary_msg">Зарплата не указана</string>
+    <string name="bullet_point">•\u0020</string>
+    <string name="email">email:\u0020</string>
+    <string name="phone_number">тел.:\u0020</string>
+    <string name="no_such_vacancies">Таких вакансий нет</string>
+    <string name="server_error">Ошибка сервера</string>
+
+    <string name="found_x_vacancies">Найдено %1s</string>
+    <plurals name="plurals_vacancy">
+        <item quantity="zero"> вакансий</item>
+        <item quantity="one"> вакансия</item>
+        <item quantity="two"> вакансии</item>
+        <item quantity="few"> вакансии</item>
+        <item quantity="many"> вакансий</item>
+        <item quantity="other"> вакансий</item>
+    </plurals>
+
+    <string name="edit_hint">Задать нужный под фрагмент хинт</string>
+    <string name="choice_region">Выбор региона</string>
+    <string name="choice_industry">Выбор отрасли</string>
+    <string name="choice_country">Выбор страны</string>
+    <string name="enter_region">Введите регион</string>
+    <string name="enter_industry">Введите отрасль</string>
+    <string name="choice_place_to_work">Выбор места работы</string>
+
+    <string name="select">Выбрать</string>
+
+    <string name="filter_title">Настройки фильтрации</string>
+    <string name="place_of_work">Место работы</string>
+    <string name="industry">Отрасль</string>
+    <string name="expected_salary">Ожидаемая зарплата</string>
+    <string name="enter_amount">Введите сумму</string>
+    <string name="dont_show_without_salary">Не показывать без зарплаты</string>
+    <string name="back_button">Стрелка назад</string>
+    <string name="apply">Применить</string>
+    <string name="reset">Сбросить</string>
+
+    <string name="country">Страна</string>
+    <string name="region">Регион</string>
+    <string name="toast_region_notification">Выбранный регион не относится к выбранной стране</string>
+    <string name="filter_region">%s, %s</string>
+
+    <string name="filter_industry_title">Выбор отрасли</string>
+    <string name="filter_industry_empty_error">Отрасли не найдены</string>
+
+    <string name="toast_no_internet">Проверьте подключение к интернету</string>
+    <string name="toast_server_error">Произошла ошибка</string>
+
+</resources>

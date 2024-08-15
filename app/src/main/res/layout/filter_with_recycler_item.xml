@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerFilterItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp60"
+    android:paddingHorizontal="@dimen/dp16"
+    android:paddingVertical="@dimen/dp8">
+
+    <TextView
+        android:id="@+id/textViewFilterItem"
+        style="@style/RegularText.16size"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/dp16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switcherFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="Какой-то текст  проверка проверка проверка проверка проверка" />
+
+    <ToggleButton
+        android:textOff="@null"
+        android:textOn="@null"
+        android:id="@+id/switcherFilter"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:background="@drawable/switch_filter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/textViewFilterItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewFilterItem"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    <ImageButton
+        android:id="@+id/arrowFilterMini"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:background="@drawable/icon_arrow_forward"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/textViewFilterItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewFilterItem"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
